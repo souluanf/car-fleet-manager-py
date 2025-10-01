@@ -16,7 +16,6 @@ import dev.luanfernandes.dto.response.VehicleResponse;
 import dev.luanfernandes.repository.VehicleRepository;
 import dev.luanfernandes.service.BrandService;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -453,7 +452,6 @@ class VehicleServiceImplTest {
         var brand = new Brand();
         brand.setId(UUID.randomUUID());
         brand.setName(name);
-        brand.setVehicles(new ArrayList<>());
         return brand;
     }
 

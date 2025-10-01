@@ -8,7 +8,6 @@ import dev.luanfernandes.domain.entity.Brand;
 import dev.luanfernandes.dto.mapper.BrandMapper;
 import dev.luanfernandes.dto.response.BrandResponse;
 import dev.luanfernandes.repository.BrandRepository;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -70,7 +69,7 @@ class BrandServiceImplTest {
     @Test
     @DisplayName("Should validate brand successfully when exists")
     void shouldValidateBrand_WhenExists() {
-        var brand = new Brand(UUID.randomUUID(), "Volkswagen", new ArrayList<>());
+        var brand = new Brand(UUID.randomUUID(), "Volkswagen");
         when(brandRepository.findByNameIgnoreCase("Volkswagen")).thenReturn(Optional.of(brand));
 
         boolean result = brandService.isBrandValid("Volkswagen");
@@ -109,7 +108,7 @@ class BrandServiceImplTest {
     @Test
     @DisplayName("Should find brand by name successfully")
     void shouldFindBrandByName_Successfully() {
-        var brand = new Brand(UUID.randomUUID(), "Fiat", new ArrayList<>());
+        var brand = new Brand(UUID.randomUUID(), "Fiat");
         when(brandRepository.findByNameIgnoreCase("Fiat")).thenReturn(Optional.of(brand));
 
         var result = brandService.findBrandByName("Fiat");
@@ -133,8 +132,8 @@ class BrandServiceImplTest {
 
     private List<Brand> createMockBrandEntities() {
         return Arrays.asList(
-                new Brand(UUID.randomUUID(), "Fiat", new ArrayList<>()),
-                new Brand(UUID.randomUUID(), "Chevrolet", new ArrayList<>()),
-                new Brand(UUID.randomUUID(), "Volkswagen", new ArrayList<>()));
+                new Brand(UUID.randomUUID(), "Fiat"),
+                new Brand(UUID.randomUUID(), "Chevrolet"),
+                new Brand(UUID.randomUUID(), "Volkswagen"));
     }
 }
