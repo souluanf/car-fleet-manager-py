@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
-import VehicleList from './pages/VehicleList';
-import VehicleForm from './pages/VehicleForm';
-import Statistics from './pages/Statistics';
-import Exercises from './pages/Exercises';
+import VehicleList from './pages/VehicleList.jsx';
+import VehicleForm from './pages/VehicleForm.jsx';
+import Statistics from './pages/Statistics.jsx';
+import Exercises from './pages/Exercises.jsx';
 import './App.css';
 
 function App() {
