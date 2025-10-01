@@ -1,0 +1,63 @@
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Backend build artifacts
+backend/target/
+*.jar
+*.war
+*.ear
+
+# Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+build/
+dist/
+coverage/
+.nyc_output/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Test results
+surefire-reports/
+failsafe-reports/
+
+# Documentation
+*.md
+README.md
+
+# Other
+sonar/
