@@ -14,13 +14,13 @@ class Settings(BaseSettings):
         extra='ignore'
     )
 
-    database_host: str
-    database_name: str
-    database_user: str
-    database_password: str
+    database_host: str = "localhost"
+    database_name: str = "test_db"
+    database_user: str = "root"
+    database_password: str = ""
     database_port: int = 3306
 
-    cors_origins: str = "http://localhost:3000,http://localhost:5173"
+    cors_origins: str
 
     @property
     def database_url(self) -> str:
