@@ -2,17 +2,17 @@
 
 Sistema de gerenciamento de frotas de veículos com cadastro completo, busca avançada, estatísticas detalhadas e exercícios de lógica de programação.
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=alert_status&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=coverage&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=code_smells&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=ncloc&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=sqale_index&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=reliability_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=duplicated_lines_density&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=vulnerabilities&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=bugs&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=security_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager&metric=sqale_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=alert_status&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=coverage&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=code_smells&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=ncloc&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=sqale_index&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=reliability_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=duplicated_lines_density&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=vulnerabilities&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=bugs&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=security_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=souluanf_car-fleet-manager-py&metric=sqale_rating&token=b6ce94a17d4984b5ba72c334c6e61732ebff4d15)](https://sonarcloud.io/summary/new_code?id=souluanf_car-fleet-manager-py)
 
 ## Sumário
 
@@ -29,7 +29,7 @@ Sistema de gerenciamento de frotas de veículos com cadastro completo, busca ava
 
 ## Arquitetura
 
-![Arquitetura da Aplicação](car-fleet-manager.png)
+![Arquitetura da Aplicação](car-fleet-manager-py.png)
 
 A aplicação segue uma arquitetura de microserviços com três componentes principais:
 - **Frontend (React):** Interface de usuário desenvolvida em React
