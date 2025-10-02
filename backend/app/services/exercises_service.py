@@ -10,27 +10,27 @@ class ExercisesService:
 
         total = request.totalEleitores
 
-        percentualVotosValidos = round((request.votosValidos / total) * 100, 2)
-        percentualVotosBrancos = round((request.votosBrancos / total) * 100, 2)
-        percentualVotosNulos = round((request.votosNulos / total) * 100, 2)
+        percentual_votos_validos = round((request.votosValidos / total) * 100, 2)
+        percentual_votos_brancos = round((request.votosBrancos / total) * 100, 2)
+        percentual_votos_nulos = round((request.votosNulos / total) * 100, 2)
 
         return VotingPercentageResponse(
-            percentualVotosValidos=percentualVotosValidos,
-            percentualVotosBrancos=percentualVotosBrancos,
-            percentualVotosNulos=percentualVotosNulos
+            percentualVotosValidos=percentual_votos_validos,
+            percentualVotosBrancos=percentual_votos_brancos,
+            percentualVotosNulos=percentual_votos_nulos
         )
 
     def sort_array(self, request: BubbleSortRequest) -> BubbleSortResponse:
-        vetorOriginal = request.vetor.copy()
-        vetorOrdenado = request.vetor.copy()
-        n = len(vetorOrdenado)
+        vetor_original = request.vetor.copy()
+        vetor_ordenado = request.vetor.copy()
+        n = len(vetor_ordenado)
 
         for i in range(n - 1):
             for j in range(n - i - 1):
-                if vetorOrdenado[j] > vetorOrdenado[j + 1]:
-                    vetorOrdenado[j], vetorOrdenado[j + 1] = vetorOrdenado[j + 1], vetorOrdenado[j]
+                if vetor_ordenado[j] > vetor_ordenado[j + 1]:
+                    vetor_ordenado[j], vetor_ordenado[j + 1] = vetor_ordenado[j + 1], vetor_ordenado[j]
 
-        return BubbleSortResponse(vetorOriginal=vetorOriginal, vetorOrdenado=vetorOrdenado)
+        return BubbleSortResponse(vetorOriginal=vetor_original, vetorOrdenado=vetor_ordenado)
 
     def bubble_sort(self, request: BubbleSortRequest) -> BubbleSortResponse:
         """Alias para sort_array"""

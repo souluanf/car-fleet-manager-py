@@ -117,13 +117,13 @@ class VehicleService:
 
     def get_vehicles_by_decade(self) -> VehiclesByDecadeResponse:
         results = self.vehicle_repository.count_by_decade()
-        vehiclesByDecade = {decade: count for decade, count in results}
-        return VehiclesByDecadeResponse(vehiclesByDecade=vehiclesByDecade)
+        vehicles_by_decade = dict(results)
+        return VehiclesByDecadeResponse(vehiclesByDecade=vehicles_by_decade)
 
     def get_vehicles_by_brand(self) -> VehiclesByBrandResponse:
         results = self.vehicle_repository.count_by_brand()
-        vehiclesByBrand = {brand: count for brand, count in results}
-        return VehiclesByBrandResponse(vehiclesByBrand=vehiclesByBrand)
+        vehicles_by_brand = dict(results)
+        return VehiclesByBrandResponse(vehiclesByBrand=vehicles_by_brand)
 
     def get_vehicles_registered_last_week(self) -> VehiclesRegisteredLastWeekResponse:
         vehicles = self.vehicle_repository.find_registered_last_week()

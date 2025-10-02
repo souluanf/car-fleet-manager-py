@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select, func, and_
 from app.domain.vehicle import Vehicle
 from app.domain.brand import Brand
-from typing import List, Optional, Union
+from typing import List, Optional
 from uuid import UUID
 from datetime import datetime, timedelta
 
@@ -17,7 +17,7 @@ class VehicleRepository:
         self.db.refresh(vehicle)
         return vehicle
 
-    def find_by_id(self, vehicle_id: Union[UUID, bytes]) -> Optional[Vehicle]:
+    def find_by_id(self, vehicle_id: UUID | bytes) -> Optional[Vehicle]:
         if isinstance(vehicle_id, UUID):
             vehicle_id_bytes = vehicle_id.bytes
         elif isinstance(vehicle_id, bytes):
