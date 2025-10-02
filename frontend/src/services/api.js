@@ -24,7 +24,7 @@ export const vehicleService = {
 };
 
 export const brandService = {
-  getAll: () => api.get('/api/v1/vehicles/brands'),
+  getAll: () => api.get('/api/v1/brands'),
 };
 
 export const exerciseService = {

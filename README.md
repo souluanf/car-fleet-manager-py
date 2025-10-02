@@ -20,10 +20,11 @@ Sistema de gerenciamento de frotas de veículos com cadastro completo, busca ava
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias](#tecnologias)
 - [Frontend](#frontend)
-- [Swagger](#swagger)
+- [API Documentation](#api-documentation)
 - [Requisitos](#requisitos)
 - [Configuração](#configuração)
 - [Execução](#execução)
+- [Estrutura do Projeto](#estrutura-do-projeto)
 - [Contato](#contato)
 
 ## Arquitetura
@@ -32,21 +33,23 @@ Sistema de gerenciamento de frotas de veículos com cadastro completo, busca ava
 
 A aplicação segue uma arquitetura de microserviços com três componentes principais:
 - **Frontend (React):** Interface de usuário desenvolvida em React
-- **Backend (Spring Boot):** API REST
+- **Backend (FastAPI/Python):** API REST moderna e performática
 - **Database (MySQL):** Banco de dados relacional para persistência
 
 ### Princípios de Desenvolvimento
-- **DDD (Domain-Driven Design):** Organização em camadas (Controller → Service → Repository) com separação clara de responsabilidades
+- **DDD (Domain-Driven Design):** Organização em camadas (Router → Service → Repository) com separação clara de responsabilidades
 - **Clean Code:** Código limpo, legível e bem documentado com nomenclatura expressiva
 - **SOLID:** Aplicação dos princípios de design orientado a objetos
+- **Type Safety:** Utilização extensiva do Pydantic para validação e serialização de dados
 
 ### Otimizações Futuras
 
 Para cenários com grande volume de dados, o sistema está preparado para evoluir com:
-- **Specification Pattern:** Para consultas complexas e dinâmicas usando JPA Specifications
-- **Custom Queries:** Queries JPQL/SQL otimizadas para desempenho em operações de leitura
+- **Query Optimization:** Queries SQL otimizadas com SQLAlchemy para desempenho em operações de leitura
 - **Pagination:** Suporte nativo para paginação em endpoints de listagem
+- **Caching:** Implementação de cache com Redis para dados frequentemente acessados
 - **Indexação:** Índices estratégicos no banco de dados para otimizar buscas
+- **Async/Await:** Suporte assíncrono do FastAPI para operações I/O bound
 
 > **Nota:** Atualmente, devido ao volume reduzido de dados, optou-se por uma implementação mais simples e direta, mantendo o código limpo e de fácil manutenção.
 
@@ -56,7 +59,7 @@ Para cenários com grande volume de dados, o sistema está preparado para evolui
 - **CRUD Completo:** Criar, listar, atualizar (completo e parcial) e excluir veículos
 - **Busca Avançada:** Filtrar veículos por nome, marca, ano e cor
 - **Campos:** Veículo, marca, ano, descrição, cor e status de venda
-- **Validações:** Validação de dados com Bean Validation
+- **Validações:** Validação de dados com Pydantic
 
 ### Estatísticas e Relatórios
 - **Dashboard de Estatísticas:** Total de veículos, vendidos e disponíveis
@@ -67,28 +70,26 @@ Para cenários com grande volume de dados, o sistema está preparado para evolui
 ### Exercícios de Lógica
 - **Cálculo de Votos:** Calcula percentuais de votos válidos, brancos e nulos
 - **Bubble Sort:** Ordenação de vetores utilizando algoritmo Bubble Sort
-- **Fatorial:** Cálculo recursivo de fatorial de números naturais
-- **Múltiplos:** Soma de múltiplos de 3 ou 5 abaixo de um número X
+- **Fatorial:** Cálculo de fatorial de números naturais
+- **Múltiplos:** Verifica se número é múltiplo de 3 ou 5
 
 ## Tecnologias
 
-### Core
-- Java 21
-- Spring Boot 3.5.5
-- Spring Data JPA
-- Maven 3.6+
+### Backend
+- Python 3.11+
+- FastAPI 0.115.5
+- SQLAlchemy 2.0.36
+- Pydantic 2.10.3
+- Uvicorn (ASGI server)
+- PyMySQL
 
 ### Banco de Dados
 - MySQL 8.0
-- Flyway (migrations)
 
 ### Documentação
-- OpenAPI 3.0 (Swagger)
-- Swagger UI
-
-### Testes
-- JUnit 5
-- Spring Boot Test
+- OpenAPI 3.1.0 (integrado ao FastAPI)
+- Swagger UI (automático)
+- ReDoc (automático)
 
 ### DevOps
 - Docker
@@ -120,8 +121,8 @@ Para cenários com grande volume de dados, o sistema está preparado para evolui
 Interface interativa com 4 exercícios programáticos:
 - **Exercício 1 - Votos:** Formulário para cálculo de percentuais eleitorais
 - **Exercício 2 - Bubble Sort:** Input de vetor e visualização da ordenação
-- **Exercício 3 - Fatorial:** Cálculo recursivo com exibição do resultado
-- **Exercício 4 - Múltiplos:** Cálculo de soma de múltiplos de 3 ou 5
+- **Exercício 3 - Fatorial:** Cálculo com exibição do resultado
+- **Exercício 4 - Múltiplos:** Verifica múltiplos de 3 e 5
 
 ### Tecnologias do Frontend
 - React 18
@@ -131,38 +132,45 @@ Interface interativa com 4 exercícios programáticos:
 - CSS3 com design responsivo
 - Navegação SPA (Single Page Application)
 
-## Swagger
+## API Documentation
 
-- **OpenAPI UI:** [http://localhost:8080/car-fleet-manager/swagger-ui/index.html](http://localhost:8080/car-fleet-manager/swagger-ui/index.html)
-- **API Docs:** [http://localhost:8080/car-fleet-manager/v3/api-docs](http://localhost:8080/car-fleet-manager/v3/api-docs)
+A documentação interativa da API está disponível automaticamente através do FastAPI:
+
+- **Swagger UI:** [http://localhost:8080/car-fleet-manager/swagger-ui](http://localhost:8080/car-fleet-manager/swagger-ui)
 
 ## Requisitos
 
-- JDK 21
-- Maven 3.6+
-- Docker
+- Python 3.11+
+- Docker & Docker Compose
+- MySQL 8.0 (via Docker)
 
 ## Configuração
 
-**Instalação do JDK, Maven e Docker:**
+### 1. Clonar o repositório
 
-- [Instruções para instalação do JDK](https://docs.oracle.com/en/java/javase/21/install/overview-jdk-installation.html)
-- [Instruções para instalação do Maven](https://maven.apache.org/install.html)
-- [Instruções para instalação do Docker](https://docs.docker.com/get-docker/)
+```bash
+git clone https://github.com/souluanf/car-fleet-manager-py.git
+cd car-fleet-manager-py
+```
 
-## Execução
+## 3. Execução
 
-Copie as variáveis utilizadas
+Execute o comando abaixo na raiz do projeto:
 
 ```bash
 cp example.env .env
 ```
 
-Execute o comando abaixo:
 
 ```bash
 docker-compose up -d
 ```
+
+Isso irá subir:
+- MySQL na porta 3306
+- Backend (FastAPI) na porta 8000
+- Frontend (React) na porta 3000
+
 
 ## Contato
 
